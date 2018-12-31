@@ -28,9 +28,20 @@ Amber::Server.configure do
   end
 
   routes :web do
-    resources "/articles", ArticleController
-    resources "/categories", CategoryController
+    # resources "/articles", ArticleController
+    # resources "/categories", CategoryController
     get "/", HomeController, :index
+  end
+
+  routes :web, "/admin" do
+    resources "/articles", Admin::ArticleController
+    resources "/categories", Admin::CategoryController
+
+    # TODO: implements
+    # resources "/previews", PreviewController, only: [:index, :show]
+    # get "/", ArticleController, :index
+    # get "/drafts", ArticleController, :drafts
+    # get "archives/:year", ArchiveController, as: :index
   end
 
   routes :api do

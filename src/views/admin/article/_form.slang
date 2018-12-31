@@ -3,7 +3,7 @@
     - article.errors.each do |error|
       li = error.to_s
 
-== form(action: "/articles/#{article.id.to_s}", method: article.id ? :patch : :post) do
+== form(action: "/admin/articles/#{article.id.to_s}", method: article.id ? :patch : :post) do
   == csrf_tag
   .form-group
     == text_field(name: "title", value: article.title, placeholder: "Title", class: "form-control")
@@ -21,4 +21,4 @@
   .form-group
     == text_field(name: "url", value: article.url, placeholder: "Url", class: "form-control")
   == submit("Submit", class: "btn btn-primary btn-sm")
-  == link_to("Back", "/articles", class: "btn btn-light btn-sm")
+  == link_to("Back", "/admin/articles", class: "btn btn-light btn-sm")
