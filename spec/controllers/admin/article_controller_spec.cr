@@ -1,17 +1,14 @@
 require "../spec_helper"
 
 def article_hash
-  {"title" => "Fake", "markdown" => "Fake", "html" => "Fake", "plain_text" => "Fake", "is_public" => "true", "published_at" => "2018-12-31 11:05:49 +09:00", "url" => "Fake"}
+  {"title" => "Fake", "markdown" => "Fake", "is_public" => "true", "published_at" => "2018-12-31 11:05:49 +09:00", "url" => "Fake"}
 end
 
 def article_params
   params = [] of String
   params << "title=#{article_hash["title"]}"
   params << "markdown=#{article_hash["markdown"]}"
-  params << "html=#{article_hash["html"]}"
-  params << "plain_text=#{article_hash["plain_text"]}"
   params << "is_public=#{article_hash["is_public"]}"
-  params << "published_at=#{article_hash["published_at"]}"
   params << "url=#{article_hash["url"]}"
   params.join("&")
 end

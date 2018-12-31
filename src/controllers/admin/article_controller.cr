@@ -51,12 +51,9 @@ module Admin
     private def article_params
       params.validation do
         required :title
-        required :markdown
-        required :html
-        required :plain_text
-        required :is_public
-        required :published_at
         required :url
+        required :markdown
+        required :is_public
       end
     end
 

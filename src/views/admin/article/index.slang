@@ -8,23 +8,19 @@
     thead
       tr
         th Title
-        th Markdown
-        th Html
+        th Url
         th Plain_text
         th Is_public
         th Published_at
-        th Url
         th Actions
     tbody
       - articles.each do |article|
         tr
           td = article.title
-          td = article.markdown
-          td = article.html
+          td = article.url
           td = article.plain_text
           td = article.is_public
           td = article.published_at
-          td = article.url
           td
             span
               == link_to("Show", "/admin/articles/#{article.id}", class: "btn btn-primary btn-sm")

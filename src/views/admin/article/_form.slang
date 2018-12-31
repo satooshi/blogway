@@ -8,17 +8,13 @@
   .form-group
     == text_field(name: "title", value: article.title, placeholder: "Title", class: "form-control")
   .form-group
+    == text_field(name: "url", value: article.url, placeholder: "Url", class: "form-control")
+  .form-group
     == text_area(name: "markdown", content: article.markdown, placeholder: "Markdown", class: "form-control", size: "30x10")
-  .form-group
-    == text_area(name: "html", content: article.html, placeholder: "Html", class: "form-control", size: "30x10")
-  .form-group
-    == text_area(name: "plain_text", content: article.plain_text, placeholder: "Plain_text", class: "form-control", size: "30x10")
   .form-group
       == label(:is_public) do
         == check_box(:is_public, checked: article.is_public.to_s == "1")
-  .form-group
-    == text_field(name: "published_at", value: article.published_at, placeholder: "Published_at", class: "form-control")
-  .form-group
-    == text_field(name: "url", value: article.url, placeholder: "Url", class: "form-control")
+
+  == hidden_field(name: "published_at", value: article.published_at, placeholder: "Published_at", class: "form-control")
   == submit("Submit", class: "btn btn-primary btn-sm")
   == link_to("Back", "/admin/articles", class: "btn btn-light btn-sm")
