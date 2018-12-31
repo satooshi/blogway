@@ -3,9 +3,9 @@ CREATE TABLE categories (
   id BIGSERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   url VARCHAR NOT NULL,
-  parent_id INT DEFAULT NULL,
   sort INT NOT NULL DEFAULT 0,
   description VARCHAR,
+  parent_id INT DEFAULT NULL,
   created_at TIMESTAMP NOT NULL,
   updated_at TIMESTAMP NOT NULL
 );
