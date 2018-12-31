@@ -20,11 +20,11 @@ watch:
       - ./src/views/**/*.slang
     # exclude: # NOTE simplistic implementation: (1) enumerate all includes and excludes; (2) return (includes - excludes)
     #  - ./src/some_irrelevant_file.cr
-  spec:
-    run_commands:
-      - AMBER_ENV=test crystal spec
-    include:
-      - ./spec/**/*.cr
+  # spec:
+  #   run_commands:
+  #     - AMBER_ENV=test crystal spec
+  #   include:
+  #     - ./spec/**/*.cr
   npm:
     build_commands:
       - yarn install --loglevel=error
