@@ -4,5 +4,3 @@ a class="nav-item #{active}" href="/" Home
 a class="nav-item #{active}" href="/articles" Articles
 - active = context.request.path == "/categories" ? "active" : ""
 a class="nav-item #{active}" href="/categories" Categories
-- active = context.request.path == "/articles" ? "active" : ""
-a class="nav-item #{active}" href="/articles" Articles
