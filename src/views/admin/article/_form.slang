@@ -15,6 +15,5 @@
       == label(:is_public) do
         == check_box(:is_public, checked: article.is_public.to_s == "1")
 
-  == hidden_field(name: "published_at", value: article.published_at, placeholder: "Published_at", class: "form-control")
   == submit("Submit", class: "btn btn-primary btn-sm")
   == link_to("Back", "/admin/articles", class: "btn btn-light btn-sm")
