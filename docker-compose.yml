@@ -16,6 +16,18 @@ services:
       - nodes:/app/node_modules
       - shards:/app/lib
 
+  test:
+    build: .
+    image: blogway
+    command: bash -c 'while ! nc -q 1 db 5432 </dev/null; do sleep 1; done && amber db drop create migrate'
+    environment:
+      AMBER_ENV: test
+      DATABASE_URL: postgres://admin:password@db:5432/blogway_test
+    links:
+      - db
+    volumes:
+      - .:/app
+
   migrate:
     build: .
     image: blogway
