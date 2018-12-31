@@ -1,4 +1,4 @@
-class Articles < Granite::Base
+class Article < Granite::Base
   adapter pg
   table_name articles
 

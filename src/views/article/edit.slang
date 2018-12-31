@@ -1,3 +1,3 @@
-h1 Edit Articles
+h1 Edit Article
 
 == render(partial: "_form.slang")

@@ -28,8 +28,8 @@ Amber::Server.configure do
   end
 
   routes :web do
+    resources "/articles", ArticleController
     resources "/categories", CategoryController
-    resources "/articles", ArticlesController
     get "/", HomeController, :index
   end
 
