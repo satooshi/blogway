@@ -51,9 +51,9 @@ class CategoryController < ApplicationController
     params.validation do
       required :name
       required :url
-      required :parent_id
+      optional :parent_id
       required :sort
-      required :description
+      optional :description
     end
   end
 
