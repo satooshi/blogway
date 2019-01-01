@@ -7,7 +7,8 @@ module Admin
     end
 
     def index
-      articles = Article.all
+      # TODO: paginate
+      articles = Article.order({created_at: :desc}).limit(20)
       render "index.slang"
     end
 
