@@ -1,9 +1,11 @@
 h1 Show Article
 p = article.title
 p = article.url
-p = article.plain_text
+div == article.html
 p = article.is_public
 p = article.published_at
+p = article.created_at
+p = article.updated_at
 p
   == link_to("Back", "/admin/articles", class: "btn btn-light btn-sm")
   == link_to("Edit", "/admin/articles/#{article.id}/edit", class: "btn btn-success btn-sm")

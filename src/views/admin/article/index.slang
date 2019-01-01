@@ -18,7 +18,7 @@
         tr
           td = article.title
           td = article.url
-          td = article.plain_text
+          td = article.plain_text.to_s[0, 100]
           td = article.is_public
           td = article.published_at
           td
