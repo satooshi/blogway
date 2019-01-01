@@ -16,8 +16,8 @@ class Article < Granite::Base
 
   # TODO: implement
   private def pre_save_article
-    self.html = markdown
-    self.plain_text = markdown
+    self.html ||= markdown
+    self.plain_text ||= markdown
     self.published_at = Time.now if is_public
   end
 end
